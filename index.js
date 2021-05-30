@@ -1,72 +1,70 @@
 async function loadData() {
     const res = await fetch("https://restcountries.eu/rest/v2/all");
     const data = await res.json();
-    displayData(data);
+    displayCountry(data);
     
   }
   
   loadData();
-  function displayData(data) {
-    const countryName = document.getElementById("countryName");
-    const country1 = document.getElementById('country');
-    const alpha2Code1 = document.getElementById('alpha2Code');
-    const numericCode1 = document.getElementById('numericCode');
-    const capital1 = document.getElementById('capital');
-    const population1 = document.getElementById('population');
-    const region1 = document.getElementById('region');
-    const area1 = document.getElementById('area');
-
-    for (let i = 0; i < data.length; i++) {
-      const element = data[i];
-      const ul = document.createElement("ul");
-      ul.innerText = element.name;
-      const div = document.createAttribute("div");
-      div.innerHTML = ul;
-      countryName.appendChild(ul);
-      var button = document.createElement("button")
-      button.innerText = "Details";
-      button.style.backgroundColor = "#444";
-      button.style.padding = "5px";
-      button.style.fontSize = "30px";
-      button.style.color = "#000";
-      button.style.width = "250px";
-      button.style.height = "50px";
-      button.style.borderRadius = "8px";
-      button.style.display = "block"
-      button.style.cursor = "pointer"
-      countryName.appendChild(button);
-        button.addEventListener('click', function(){
-          const table = document.getElementById("tablee")
-          table.style.display="block"
-          displayData1 (element)
+  const displayCountry = country =>{
+    const countries = document.getElementById("allcountry")
+    // Table Preview id Input Start
+        const country1 = document.getElementById('country');
+        const alpha2Code1 = document.getElementById('alpha2Code');
+        const numericCode1 = document.getElementById('numericCode');
+        const capital1 = document.getElementById('capital');
+        const population1 = document.getElementById('population');
+        const region1 = document.getElementById('region');
+        const area1 = document.getElementById('area');
+      // Table Preview id Input End
+    for (let i = 0; i < country.length; i++) {
+      const countryInfo = country[i];
+      const div = document.createElement('div')
+      div.className = "newDiv"
+      const countryInformation = `
+        <h3 class="countryHead">${countryInfo.name} </h3>
+        <p>${countryInfo.capital}</p>      
+      ` 
+      div.innerHTML = countryInformation;
+      const button = document.createElement('button')
+      button.innerText ="Info More"
+      button.className = "btn"
+      button.addEventListener('click', function(){
+        const preViewInformation = document.getElementById("preview")
+        countries.style.display="none"
+        preViewInformation.style.display = "block"
+        countryInfroma (countryInfo)  
       })
-      function displayData1 (currentData){
-        const name  = currentData.name;
+      div.appendChild(button)
+       countries.appendChild(div)
+ 
+       function countryInfroma (Information){
+        const name  = Information.name;
         country1.innerText = name;
-
-         const alpha2Code  = currentData.alpha2Code;
+         const alpha2Code  = Information.alpha2Code;
          alpha2Code1.innerText = alpha2Code;
-
-         const numericCode  = currentData.numericCode;
+         const numericCode  = Information.numericCode;
          numericCode1.innerText = numericCode;
-
-         const capital  = currentData.capital;
+         const capital  = Information.capital;
          capital1.innerText = capital; 
-
-        const population  = currentData.population;
-        population1.innerText = population;
-
-        const region  = currentData.region;
+        const population  = Information.population;
+        population1.innerText = population; 
+        const region  = Information.region;
         region1.innerText = region;
-
-         const area = currentData.area;
+         const area = Information.area;
          area1.innerText = area;
-
-         function showData(){
-            const name  = currentData.name;
-            country1.innerText = name;
-         }
          
-      }     
+  
+      }
+
+
     }
-  }
+
+    
+  } 
+
+  // const  againSuch = document.getElementById("again")
+  //       againSuch.addEventListener('click',function(){
+  //        countries.style.display="block"
+  //        preViewInformation.style.display = "none"
+  //            })

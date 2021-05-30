@@ -1,4 +1,58 @@
-.table td,
+#allcountry {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  padding: 20px;
+}
+
+.newDiv {
+  color: goldenrod;
+  font-size: 20px;
+  border: 1px solid green;
+  width: 400px;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+}
+.countryHead {
+  color: magenta;
+}
+.btn {
+  width: 120px;
+  padding: 15px;
+  background-color: blue;
+  border-radius: 8px;
+  color: antiquewhite;
+  font-size: 15px;
+}
+#preview {
+  display: none;
+  background-image: url(img/QTF_pic3.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin: 187px 360px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.6);
+  border-radius: 25px;
+}
+.table th,
+.table td {
+  border: 2px solid green;
+  border-radius: 25px;
+}
+button.btn.btn-success {
+  margin: 0 auto;
+  display: inherit;
+  margin-top: -124px;
+}
+#tablee {
+  background-image: ;
+}
+
+/*{ .table td,
 .table th {
   border: 2px solid green;
 }
@@ -22,4 +76,4 @@ body {
 }
 #tablee {
   display: none;
-}
+} */

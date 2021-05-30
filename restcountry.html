@@ -9,54 +9,83 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-                <div class="col-md-4">
-                <h1 id="countryName"></h1>  
-                </div>  
-            <div>
+    <div class="<div class="container-fluid">
+      
+    
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" >
+                CreateSomething
+              </a>
 
-            <div class="col-md-8" id="tablee" style="position: fixed;">
-                <table class="table table-hover">
-
-            <tbody class="boder">
-                <tr>
-                <th>Country Name</th>
-                <td class="ng-binding" id="country"></td>
-                </tr>
-                <tr>
-                <th>Alpha2Code</th>
-                <td class="ng-binding" id="alpha2Code"></td>
-                </tr>
-                <th>NumericCode</th>
-                <td class="ng-binding" id="numericCode"></td>
-                </tr>
-                <tr>
-                <th>Capital</th>
-                <td class="ng-binding" id="capital"> </td>
-                </tr>
-                <tr>
-                <th>Official population </th>
-                <td class="ng-binding" id="population"></td>
-                </tr>
-                <tr>
-                <th>Region</th>
-                <td class="ng-binding" id="region">000000000000</td>
-                </tr>
-                <tr>
-                <th>Area</th>
-                <td class="ng-binding" id="area"></td>
-                </tr>
-            </tbody>
-            </table>
-            </div>
-            </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">More Then</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search Country" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
     </div>
-   
+    
 
-    <script src="index.js"></script>
+
+
+
+
+    <div id="allcountry"></div>
+
+    <div id="preview">
+          <div class="col-md-8" id="tablee">
+              <table class="table table-hover">
+                  <tbody class="boder">
+              <tr>
+              <th>Country Name</th>
+              <td class="ng-binding" id="country"></td>
+              </tr>
+              <tr>
+              <th>Alpha2Code</th>
+              <td class="ng-binding" id="alpha2Code"></td>
+              </tr>
+              <th>NumericCode</th>
+              <td class="ng-binding" id="numericCode"></td>
+              </tr>
+              <tr>
+              <th>Capital</th>
+              <td class="ng-binding" id="capital"> </td>
+              </tr>
+              <tr>
+              <th>Official population </th>
+              <td class="ng-binding" id="population"></td>
+              </tr>
+              <tr>
+              <th>Region</th>
+              <td class="ng-binding" id="region">000000000000</td>
+              </tr>
+              <tr>
+              <th>Area</th>
+              <td class="ng-binding" id="area"></td>
+              </tr>
+                  </tbody>
+              </table>
+          </div>
+          <button type="button" id="again" class="btn btn-success">Again</button>
+    </div>
+       <script src="index.js"></script>
   </body>
 </html>
