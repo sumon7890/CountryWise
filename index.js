@@ -1,3 +1,5 @@
+//https://github.com/sumon7890/CountryWise.git
+
 async function loadData() {
     const res = await fetch("https://restcountries.eu/rest/v2/all");
     const data = await res.json();
@@ -19,9 +21,11 @@ async function loadData() {
       // Table Preview id Input End
     for (let i = 0; i < country.length; i++) {
       const countryInfo = country[i];
+      console.log(countryInfo)
       const div = document.createElement('div')
       div.className = "newDiv"
       const countryInformation = `
+      <img class="imgTag" src=${countryInfo.flag} />
         <h3 class="countryHead">${countryInfo.name} </h3>
         <p>${countryInfo.capital}</p>      
       ` 

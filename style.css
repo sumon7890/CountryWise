@@ -18,12 +18,13 @@
   color: magenta;
 }
 .btn {
-  width: 120px;
+  width: 150px;
   padding: 15px;
-  background-color: blue;
+  background-color: tomato;
   border-radius: 8px;
   color: antiquewhite;
-  font-size: 15px;
+  font-size: 21px;
+  font-weight: bold;
 }
 #preview {
   display: none;
@@ -50,6 +51,11 @@ button.btn.btn-success {
 }
 #tablee {
   background-image: ;
+}
+.imgTag {
+  height: 200px;
+  width: 100%;
+  padding-bottom: 15px;
 }
 
 /*{ .table td,
